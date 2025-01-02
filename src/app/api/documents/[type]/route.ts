@@ -2,15 +2,9 @@ import { NextRequest, NextResponse } from 'next/server'
 import fs from 'fs/promises'
 import path from 'path'
 
-type Props = {
-    params: {
-        type: string
-    }
-}
-
 export async function GET(
     request: NextRequest,
-    { params }: Props
+    { params }: { params: { type: string } }
 ) {
     try {
         const docPath = path.join(process.cwd(), 'public/docs', params.type)
