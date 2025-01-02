@@ -4,7 +4,7 @@ import Link from 'next/link'
 
 export default function Navbar() {
     const navbarTogglerRef = useRef<HTMLButtonElement | null>(null)
-    const navLinksRef = useRef<NodeListOf<Element> | null>(null)
+    const navLinksRef = useRef<NodeListOf<HTMLAnchorElement> | null>(null)
 
     useEffect(() => {
         const handleNavLinkClick = () => {
@@ -17,15 +17,18 @@ export default function Navbar() {
             }
         }
 
-        if (navLinksRef.current) {
-            navLinksRef.current.forEach(link => {
+        // Attach event listeners
+        const links = navLinksRef.current
+        if (links) {
+            links.forEach(link => {
                 link.addEventListener('click', handleNavLinkClick)
             })
         }
 
+        // Cleanup event listeners
         return () => {
-            if (navLinksRef.current) {
-                navLinksRef.current.forEach(link => {
+            if (links) {
+                links.forEach(link => {
                     link.removeEventListener('click', handleNavLinkClick)
                 })
             }
@@ -35,10 +38,13 @@ export default function Navbar() {
     return (
         <nav className="navbar navbar-expand-lg fixed-top">
             <div className="container">
+                {/* Logo */}
                 <Link className="navbar-brand" href="/">
                     <img className="navbar-img" src="/images/logo.png" alt="CCAYEF Logo" />
                     CCAYEF
                 </Link>
+
+                {/* Toggle Button */}
                 <button
                     ref={navbarTogglerRef}
                     className="navbar-toggler"
@@ -51,14 +57,18 @@ export default function Navbar() {
                 >
                     <span className="navbar-toggler-icon" />
                 </button>
+
+                {/* Navbar Links */}
                 <div
-                    ref={(el) => {
-                        if (el) navLinksRef.current = el.querySelectorAll('.nav-link')
-                    }}
                     className="collapse navbar-collapse justify-content-end"
                     id="navbarNav"
                 >
-                    <ul className="navbar-nav">
+                    <ul
+                        className="navbar-nav"
+                        ref={(el) => {
+                            if (el) navLinksRef.current = el.querySelectorAll('.nav-link')
+                        }}
+                    >
                         <li className="nav-item">
                             <Link className="nav-link" href="/">Home</Link>
                         </li>
