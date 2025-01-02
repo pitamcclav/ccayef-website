@@ -19,8 +19,8 @@ export async function POST(req: NextRequest) {
         // Email options
         const mailOptions: Mail.Options = {
             from: email,
-            to: 'pita@mailinator.com', // Replace with your destination email
-            subject: `New message from ${name}`,
+            to: 'ccayefug@gmail.com', // Replace with your destination email
+            subject: `Message from ${name}`,
             text: message,
         };
 

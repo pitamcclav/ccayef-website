@@ -9,43 +9,76 @@ export default function AboutPage() {
 
           </div>
 
-          <section className="sec-one">
-              <div className="container">
-                  <div className="section-header">
-                      <h3>Our Journey</h3>
-                      <p>Learn more about us</p>
+          <section className="py-0 bg-gray-50">
+              <div className="container mx-auto px-4">
+                  {/* Header */}
+                  <div className="text-center mb-12">
+                      <h3 className="text-3xl font-bold text-gray-800 mb-2">Our Journey</h3>
+                      <p className="text-lg text-gray-600">Learn more about us</p>
+                      <div className="w-24 h-1 bg-blue-500 mx-auto mt-4"></div>
                   </div>
-                  <div className="row" data-aos="fade-up">
+
+                  {/* Content */}
+                  <div className="row">
+                      {/* Image Column */}
+                      <div className="col-lg-6 mb-4 mb-lg-0">
+                          <div className="rounded-lg overflow-hidden">
+                              <img
+                                  src="/images/voc4.jpg"
+                                  alt="CCAYEF Journey"
+                                  className="w-100 h-auto "
+                              />
+                          </div>
+                      </div>
+
+                      {/* Text Column */}
                       <div className="col-lg-6">
-                          <img src="/images/voc4.jpg" alt="Alternate Text"/>
+                          <div className="space-y-4 text-gray-700">
+                              <p className="leading-relaxed">
+                                  Child Care And Youth Empowerment Foundation (CCAYEF) is a non-profit charitable
+                                  organization that was established in 2008.
+                              </p>
+
+                              <p className="leading-relaxed">
+                                  The organization was founded by a three of individuals who were passionate about the
+                                  welfare of children and young people in Uganda being nurtured holistically to
+                                  realize their full growth and development potential.
+                              </p>
+
+                              <p className="leading-relaxed">
+                                  Since its establishment, CCAYEF has been working tirelessly to provide essential
+                                  services to children and young people in Uganda, creating lasting positive impact
+                                  in their lives and building a better future.
+                              </p>
+
+                          </div>
+                      </div>
+                  </div>
+                  <div className="row mt-3">
+                      <div className="col-lg-6">
+                          <div className="space-y-2">
+
+                              <h4 className="text-xl font-semibold text-gray-800">Our Focus Areas:</h4>
+                              <ul className="list-disc pl-5 space-y-2">
+                                  <li>Early childhood development through education</li>
+                                  <li>Healthcare services</li>
+                                  <li>Children&#39;s rights awareness and advocacy</li>
+                                  <li>Gender Based Violence prevention</li>
+                              </ul>
+                          </div>
                       </div>
                       <div className="col-lg-6">
-                          <p>
-                              Child Care And Youth Empowerment Foundation (CCAYEF) is a non-profit charitable
-                              organization that was established in 2008.
-
-                              The organization was founded by a three of individuals who were passionate about the
-                              welfare of children and young people in Uganda being nurtured holistically to
-                              realize their full growth and development potential.
-                              The founders of CCAYEF recognized the need to provide support and resources to children
-                              and young people who were vulnerable and marginalized.
-                              The organization was established with the aim of empowering children and young people to
-                              reach their full potential and lead healthy and fulfilling lives.
-                              Since its establishment, CCAYEF has been working to provide early childhood development
-                              through education, healthcare service, and other essential services to
-                              children and young people in Uganda.
-                              The organization has also been working to raise awareness about the rights of children and
-                              young people and to advocate for their rights including Gender Based Violence.
-                              CCAYEF is committed to making a positive impact in the lives of children and young people
-                              in Uganda and to creating a better future for them.
-                              The organization is registered by Uganda Ministry of Internal Affairs – NGO Board <b>(Reg
-                              No: 4164, CCAYEF. S. 5914/9236)</b>
-                          </p>
+                          <div className="mt-6 p-4 bg-blue-50 rounded-lg border border-blue-100">
+                              <p className="text-sm font-medium text-blue-800">
+                                  Registered by Uganda Ministry of Internal Affairs – NGO Board
+                                  <br/>
+                                  <span className="font-bold">Reg No: 4164, CCAYEF. S. 5914/9236</span>
+                              </p>
+                          </div>
                       </div>
                   </div>
               </div>
           </section>
-
           <section>
               <div className="container">
                   <div className="row" data-aos="fade-up">
@@ -108,7 +141,7 @@ export default function AboutPage() {
                       </div>
                   </div>
                   <div className="row justify-content-center" data-aos="fade-up">
-                      <div className="col-lg-4 my-4">
+                  <div className="col-lg-4 my-4">
                           <div className="card-item ci4">
                               <div className="circle">4</div>
                               <div className="card-content">
@@ -159,7 +192,7 @@ export default function AboutPage() {
                       <div className="col-lg-4">
                           <div className="team-member">
                               <div className="image-wrapper">
-                                  <img src="images/image_6.jpg" alt="Team Member 1"/>
+                                  <img src="/images/staff/ruth.png" alt="Team Member 1"/>
 
                               </div>
                               <h5>Mrs. Lucia Kivumbi</h5>
@@ -172,7 +205,7 @@ export default function AboutPage() {
                       <div className="col-lg-4">
                           <div className="team-member">
                               <div className="image-wrapper">
-                                  <img src="/images/image_6.jpg" alt="Team Member 1"/>
+                                  <img src="/images/staff/judith.png" alt="Team Member 1"/>
 
                                   <h5>Mrs. Judith Katongole</h5>
                                   <p>Finance and HR</p>
