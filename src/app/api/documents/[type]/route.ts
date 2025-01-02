@@ -17,11 +17,11 @@ export async function GET(
         }))
 
         return NextResponse.json(fileList)
-    } catch (error: any) {
-        console.error('Error reading documents directory:', error.message)
-        return NextResponse.json(
-            { error: 'Failed to load documents' },
-            { status: 500 }
-        )
+    } catch (error) {
+        if (error instanceof Error) {
+            console.error('Error reading documents directory:', error.message)
+        } else {
+            console.error('Error reading documents directory:', error)
+        }
     }
 }
