@@ -8,10 +8,40 @@ import AOSProvider from "@/components/AOSProvider";
 
 
 export const metadata: Metadata = {
-    title: 'CCAYEF - Empowering Youth',
-    description: 'Empowering youth and fostering community development.',
-    keywords: ['CCAYEF', 'youth empowerment', 'community development', 'non-profit'],
-}
+    title: 'CCAYEF | Empowering Youth for a Brighter Future',
+    description: 'CCAYEF focuses on empowering youth and fostering community development through education, skill-building, and leadership programs.',
+    keywords: [
+        'CCAYEF',
+        'youth empowerment',
+        'community development',
+        'non-profit organization',
+        'youth education',
+        'sanitation promotion'
+    ],
+    openGraph: {
+        title: 'CCAYEF | Empowering Youth for a Brighter Future',
+        description: 'Empowering youth and fostering community development through impactful programs.',
+        url: 'https://www.ccayefug.org',
+        siteName: 'CCAYEF',
+        images: [
+            {
+                url: '/images/logo.png', // Ensure this image exists
+                width: 1200,
+                height: 630,
+                alt: 'CCAYEF Logo'
+            }
+        ],
+        type: 'website',
+    },
+    twitter: {
+        card: 'summary_large_image',
+        site: '@CCAYEF',
+        title: 'CCAYEF | Empowering Youth for a Brighter Future',
+        description: 'Empowering youth and fostering community development.',
+        images: ['/images/og-image.png'],
+    },
+};
+
 
 export default function RootLayout({
 
