@@ -1,5 +1,8 @@
+// eslint-disable-next-line @typescript-eslint/no-require-imports
 const { execSync } = require('child_process');
+// eslint-disable-next-line @typescript-eslint/no-require-imports
 const { createServer } = require('http');
+// eslint-disable-next-line @typescript-eslint/no-require-imports
 const next = require('next');
 
 // Run build command if not already built
