@@ -1,0 +1,1 @@
+self.__RSC_SERVER_MANIFEST="{\"node\":{\"00a210f419be2214543a3de1809e92cc36ee7ddd55\":{\"workers\":{\"app/api/images/route\":{\"moduleId\":\"17689\",\"async\":false}},\"layer\":{\"app/api/images/route\":\"rsc\"}}},\"edge\":{},\"encryptionKey\":\"process.env.NEXT_SERVER_ACTIONS_ENCRYPTION_KEY\"}"
