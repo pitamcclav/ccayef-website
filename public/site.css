@@ -6,6 +6,7 @@
     --text: #333333;
     --text-light: #595959;
     --gray-dark: #2c3e50;
+    --text-secondary: #52565e;
     --font-default: 'Inter', sans-serif;
     --font-heading: 'Poppins', sans-serif;
     --transition: all 0.3s ease;
@@ -168,7 +169,7 @@ p {
 }
 
 /* Navbar Links */
-.navbar .nav-link {
+.navbar-nav .nav-link {
     position: relative;
     margin-right: 10px;
     font-weight: 500;
@@ -177,12 +178,12 @@ p {
     padding-bottom: 0.25rem; /* Added padding for underline */
 }
 
-.navbar .nav-link:focus-visible {
+.navbar-nav .nav-link:focus-visible {
     outline: 2px solid var(--primary);
     outline-offset: 2px;
 }
 
-.navbar .nav-link::after {
+.navbar-nav .nav-link::after {
     content: '';
     position: absolute;
     width: 0;
@@ -194,16 +195,16 @@ p {
     opacity: 1; /* Added opacity */
 }
 
-.navbar .nav-link:hover::after,
-.navbar .nav-link.active::after {
+.navbar-nav .nav-link:hover::after,
+.navbar-nav .nav-link.active::after {
     width: 100%;
 }
 
-.navbar .nav-link:hover {
-    color: var(--primary) !important;
+.navbar-nav .nav-link:hover {
+    color: var(--primary);
 }
 
-.navbar .nav-link.active {
+.navbar-nav .nav-link.active {
     color: var(--primary) !important;
 }
 
@@ -293,7 +294,7 @@ p {
 
 /* Modern section styles */
 section {
-    padding: 5rem 0;
+    padding: 2rem 0;
 }
 
 .section-header {

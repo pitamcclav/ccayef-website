@@ -59,16 +59,12 @@ export default function Navbar() {
                 </button>
 
                 {/* Navbar Links */}
-                <div
-                    className="collapse navbar-collapse justify-content-end"
-                    id="navbarNav"
-                >
-                    <ul
-                        className="navbar-nav"
+                <div className="collapse navbar-collapse justify-content-end"
+                    id="navbarNav">
+                    <ul className="navbar-nav"
                         ref={(el) => {
                             if (el) navLinksRef.current = el.querySelectorAll('.nav-link')
-                        }}
-                    >
+                        }} >
                         <li className="nav-item">
                             <Link className="nav-link" href="/">Home</Link>
                         </li>

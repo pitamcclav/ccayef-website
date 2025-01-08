@@ -22,6 +22,7 @@ export default function ProjectPage() {
                                 achievements: '33% of households improved sanitation, 22% installed handwashing facilities, and 19% achieved Open Defecation Free status.',
                                 period: '1st Sept 2023 to date',
                                 partners: 'Embassy of Iceland',
+                                url: '/docs/reports/iNCEPTION  REPORT FINAL.docx'
                             },
                             {
                                 title: 'Pallisa & Kumi Town Roads',
@@ -29,6 +30,7 @@ export default function ProjectPage() {
                                 achievements: 'Ongoing.',
                                 period: 'May 2024',
                                 partners: 'Arab Contractors',
+                                url: '/docs/reports/iNCEPTION  REPORT FINAL.docx'
                             },
                             {
                                 title: 'MHM Project in Fishing Communities',
@@ -36,6 +38,7 @@ export default function ProjectPage() {
                                 achievements: 'Supported 4 schools to promote MHM and became WASH-friendly.',
                                 period: '2018 to 2019',
                                 partners: 'Mobile Mama UK',
+                                url: '/docs/reports/ccayef-2020-report.pdf'
                             },
                             {
                                 title: 'Girls In Control (GiC-MHM)',
@@ -43,6 +46,7 @@ export default function ProjectPage() {
                                 achievements: 'Supported 72 primary schools in Mukono District to become WASH friendly.',
                                 period: 'Sept 2014 - Sept 2016',
                                 partners: ' SNV - Netherlands Development Organization',
+                                url: '/docs/reports/ccayef-2020-report.pdf'
                             },
                             {
                                 title: 'Market Based Sanitation & WiS',
@@ -50,6 +54,7 @@ export default function ProjectPage() {
                                 achievements: 'Supported 16 schools to become WASH-friendly, improved latrines, and Open Defecation Free status for 166 villages.',
                                 period: 'June 2019 to June 2022',
                                 partners: 'USAID',
+                                url: '/docs/reports/CCAYEF end of Project Report for MBSIA 2022.docx'
                             },
                             {
                                 title: 'MARPS Project',
@@ -57,6 +62,7 @@ export default function ProjectPage() {
                                 achievements: 'Held 32 dialogue meetings for 800 youth and conducted 24 film shows for 1200 youth.',
                                 period: 'Oct 2013 - Sept 2015',
                                 partners: 'AMICAALL & CSF',
+                                url: '/docs/reports/ccayef-2020-report.pdf'
                             },
                             {
                                 title: 'EYoFs Project',
@@ -64,6 +70,7 @@ export default function ProjectPage() {
                                 achievements: 'Reached 1718 young people with HIV/STI information and 9343 through peer sensitization.',
                                 period: 'Jan 2013 - Jan 2014',
                                 partners: 'Naguru Teenage Information and Health Center / SEGAL Family Foundation',
+                                url: '/docs/reports/ccayef-2020-report.pdf'
                             },
                         ].map((project, index) => (
                             <div className="col-12 mb-4" key={index} data-aos="fade-up">
@@ -93,9 +100,15 @@ export default function ProjectPage() {
 
                                     {/* Download Button */}
                                     <div className="project-download">
-                                        <button className="btn btn-primary">
+                                        <a
+                                            href={project.url}
+                                            className="btn btn-primary"
+                                            download
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                        >
                                             <i className="fas fa-download"></i> Download Report
-                                        </button>
+                                        </a>
                                     </div>
                                 </div>
                             </div>

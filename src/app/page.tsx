@@ -2,10 +2,15 @@
 import React from 'react'
 import { useCarousel} from "@/hooks/useCarousel";
 import useContactForm from "@/hooks/useContactForm";
+import Link from "next/link";
+// eslint-disable-next-line @typescript-eslint/ban-ts-comment
+// @ts-expect-error
+import { PureIncrement } from 'pure_counter';
 
 
 export default function Home() {
     useCarousel('heroCarousel')
+
 
     const { formData, status, handleChange, handleSubmit } = useContactForm();
     return (
@@ -14,10 +19,11 @@ export default function Home() {
             <div id="heroCarousel" className="carousel slide" data-bs-ride="carousel">
                 <div className="welcome" data-aos="fade-down" data-aos-duration="1000">
                     <h1>Welcome to CCAYEF</h1>
+                    <a href="#volunteer" className="btn btn-primary mx-3">Get Started</a>
                 </div>
                 <div className="carousel-inner">
 
-                    <div className="carousel-item active">
+                <div className="carousel-item active">
                         <img src="/images/Learning visit for students of Wisconcin_USA at CCAYEF.jpg" className="d-block w-100" alt="..."/>
                             <div className="carousel-caption">
                                 <h5> Communities Involved</h5>
@@ -56,12 +62,13 @@ export default function Home() {
                     <span className="carousel-control-next-icon" aria-hidden="true"></span>
                     <span className="visually-hidden">Next</span>
                 </button>
+
             </div>
         </section>
 
 
 
-        <section className="volunteer-section">
+        <section className="volunteer-section" id="volunteer">
             <div className="container">
                 <div className="section-header" data-aos="fade-up">
                     <h3>Join Us</h3>
@@ -144,7 +151,7 @@ export default function Home() {
                                     <li>WASH and Climate Change</li>
                                 </ul>
 
-                                <a href="#" className="btn btn-primary nav-bottom" data-page="services" >Learn More</a>
+                                <Link href="/service" className="btn btn-primary nav-bottom" >Learn More</Link>
                             </div>
                         </div>
 
@@ -158,65 +165,58 @@ export default function Home() {
 
 
 
-        <section className="our-partners">
-            <div className="section-header">
-                <h3>Our Partners</h3>
-                <p>Organizations that support our mission</p>
-            </div>
-            <div className="row" data-aos="fade-up">
-                <div className="col">
-                    <a href="https://www.government.is/diplomatic-missions/embassy-of-iceland-in-kampala/">
-                        <img src="/images/embassy.svg" alt='...'/>
-                    </a>
-                </div>
-                <div className="col">
-                    <a href="https://www.girlsnotbrides.org/our-partnership/national-partnerships-coalitions/uganda/">
-                        <img src="/images/gnb.png" alt='...'/>
-                    </a>
-                </div>
-                <div className="col" >
-                    <a href="https://www.segalfamilyfoundation.org/">
-                        <img style={{backgroundColor: 'green', padding: '10px'}} src="/images/segal.svg"  alt='...'/>
-                    </a>
-                </div>
-                <div className="col">
-                    <a href="https://ngoforum.or.ug/">
-                        <img src="images/ngo-forum.png" alt='....'/>
-                    </a>
-                </div>
-                <div className="col">
-                    <a href="https://kayunga.go.ug/">
-                        <img src="images/kayunga.png"  alt='...'/>
-                    </a>
+        <section id="stats-counter" className="stats-counter section-bg">
+            <div className="container">
+                <div className="section-header" data-aos="fade-up">
+                    <h3>Achievements</h3>
+                    <p>Collaborating for Change</p>
                 </div>
 
-                <div className="row" data-aos="fade-up">
-                    <div className="col">
-                        <a href="https://www.muwrp.org/">
-                            <img src="images/muwrp.png" alt='....'/>
-                        </a>
+                <div className="row gy-4">
+                    <div className="col-lg-3 col-md-6">
+                    <div className="stats-item d-flex align-items-center w-100 h-100">
+                            <i className="bi bi-emoji-smile color-blue flex-shrink-0"></i>
+                            <div>
+                                <span><PureIncrement start={0} end={10} duration={1} className="purecounter"/></span>
+                                <p>Happy Clients</p>
+                            </div>
+                        </div>
                     </div>
-                    <div className="col">
-                        <a href="https://www.usaid.gov/">
-                            <img style={{backgroundColor:'#000061', padding: '10px'}} src="/images/usaid.svg"  alt='...'/>
-                        </a>
+
+
+                    <div className="col-lg-3 col-md-6">
+                        <div className="stats-item d-flex align-items-center w-100 h-100">
+                            <i className="bi bi-journal-richtext color-orange flex-shrink-0"></i>
+                            <div>
+                                <span><PureIncrement start={0} end={10} duration={1} className="purecounter" /></span>
+
+                                <p>Projects</p>
+                            </div>
+                        </div>
                     </div>
-                    <div className="col">
-                        <a href="https://buikwe.go.ug/">
-                            <img src="/images/buikwe.png"  alt='...'/>
-                        </a>
+
+                    <div className="col-lg-3 col-md-6">
+                        <div className="stats-item d-flex align-items-center w-100 h-100">
+                            <i className="bi bi-headset color-green flex-shrink-0"></i>
+                            <div>
+                                <span><PureIncrement start={0} end={10} duration={1} className="purecounter"/></span>
+                                <p>Hours Of Support</p>
+                            </div>
+                        </div>
                     </div>
-                    <div className="col">
-                        <a href="https://mukono.go.ug/">
-                            <img src="/images/mukono.png" alt='...'/>
-                        </a>
+
+                    <div className="col-lg-3 col-md-6">
+                        <div className="stats-item d-flex align-items-center w-100 h-100">
+                            <i className="bi bi-people color-pink flex-shrink-0"></i>
+                            <div>
+                                <span><PureIncrement start={0} end={10} duration={1} className="purecounter"/></span>
+                                <p>Hard Workers</p>
+                            </div>
+                        </div>
                     </div>
-                    <div className="col">
-                        <a href="https://uwasnet.org/">
-                            <img src="/images/uwasenet.png"  alt='....'/>
-                        </a>
-                    </div>
+
                 </div>
+
             </div>
         </section>
 
@@ -224,9 +224,8 @@ export default function Home() {
         <section className="donate-section sec-one">
             <div className="container">
                 <div className="section-header" data-aos="fade-up">
-                    <h3>Donate</h3>
+                <h3>Donate</h3>
                     <p>Help us make a difference in the lives of the less privileged</p>
-
                 </div>
                 <div className="donate-btn">
                     <a href="#" className="btn btn-primary">Donate Now</a>

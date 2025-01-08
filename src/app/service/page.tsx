@@ -3,6 +3,30 @@
 import React from 'react'
 
 export default function ServicePage() {
+    // const toggleAccordionItems = ()=>{
+    //     const accordionItems = document.querySelectorAll('.accordion-collapse');
+    //     if (window.innerWidth >= 992) {
+    //         accordionItems.forEach(item => item.classList.add('show'));
+    //     } else {
+    //         accordionItems.forEach(item => item.classList.remove('show'));
+    //     }
+    // };
+    //
+    // const observeAccordionContainer = ()=>{
+    //     const observer = new MutationObserver((mutationsList, observer) => {
+    //         const accordionContainer = document.querySelector('.accordion');
+    //         if (accordionContainer) {
+    //             toggleAccordionItems(); // Adjust accordion items based on screen size
+    //             observer.disconnect(); // Stop observing once adjustments are made
+    //         }
+    //     });
+    //
+    //     // Observe the #content container for any new children (such as dynamically loaded accordion)
+    //     // observer.observe(document.getElementById('content'), {
+    //     //     childList: true,
+    //     //     subtree: true,
+    //     // });
+    // };
   return (
       <div>
           <div className="breadcrumbs">
@@ -38,7 +62,7 @@ export default function ServicePage() {
                                               </div>
                                           </div>
                                       </div>
-                                      <a href="#" data-page="earlyChildhoodDev" className="btn btn-primary more my-3">Learn
+                                      <a href="/service/ecd" data-page="earlyChildhoodDev" className="btn btn-primary more my-3">Learn
                                           More</a>
                                   </div>
                               </div>
@@ -67,7 +91,7 @@ export default function ServicePage() {
                                               </div>
                                           </div>
                                       </div>
-                                      <a href="#" data-page="teenageMotherRehab" className="btn btn-primary more my-3">Learn
+                                      <a href="/service/tmr" data-page="teenageMotherRehab" className="btn btn-primary more my-3">Learn
                                           More</a>
                                   </div>
                               </div>
@@ -94,7 +118,7 @@ export default function ServicePage() {
                                               </div>
                                           </div>
                                       </div>
-                                      <a href="#" data-page="vocationalTraining" className="btn btn-primary more my-3">Learn
+                                      <a href="/service/vst" data-page="vocationalTraining" className="btn btn-primary more my-3">Learn
                                           More</a>
                                   </div>
                               </div>
@@ -128,7 +152,7 @@ export default function ServicePage() {
                                           </div>
                                       </div>
                                   </div>
-                                  <a href="#" data-page="healthServices" className="btn btn-primary more my-3">More
+                                  <a href="/service/hs" data-page="healthServices" className="btn btn-primary more my-3">More
                                       ....</a>
                               </div>
                           </div>
@@ -158,7 +182,7 @@ export default function ServicePage() {
                                           </div>
                                       </div>
                                   </div>
-                                  <a href="#" data-page="WASHandClimateChange"
+                                  <a href="/service/wac" data-page="WASHandClimateChange"
                                      className="btn btn-primary more my-3">More...</a>
                               </div>
                           </div>
@@ -195,7 +219,7 @@ export default function ServicePage() {
                                           </div>
                                       </div>
                                   </div>
-                                  <a href="#" data-page="youthEmpowerment"
+                                  <a href="/service/ae" data-page="youthEmpowerment"
                                      className="btn btn-primary more my-3">More...</a>
                               </div>
                           </div>
