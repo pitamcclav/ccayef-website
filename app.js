@@ -2,9 +2,11 @@
 const { createServer } = require('http');
 // eslint-disable-next-line @typescript-eslint/no-require-imports
 const next = require('next');
+// eslint-disable-next-line @typescript-eslint/no-require-imports
 const { PrismaClient } = require('@prisma/client')
+// eslint-disable-next-line @typescript-eslint/no-require-imports
 const { execSync } = require('child_process')
-const path = require('path')
+
 
 const dev = process.env.NODE_ENV !== 'production';
 const app = next({ dev });
