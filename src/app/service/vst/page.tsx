@@ -1,110 +1,211 @@
 'use client'
 
 import React from 'react'
-import Link from "next/link";
+import Image from 'next/image'
+import Link from 'next/link'
 
-export default function ServicePage() {
-  return (
-      <div>
+const courses = [
+    {
+        title: "Tailoring & Fashion Design",
+        description: "Learn professional sewing techniques and fashion design principles.",
+        icon: (
+            <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15.232 5.232l3.536 3.536m-2.036-5.036a2.5 2.5 0 113.536 3.536L6.5 21.036H3v-3.572L16.732 3.732z" />
+            </svg>
+        )
+    },
+    {
+        title: "Hairdressing & Beauty",
+        description: "Master hair styling, beauty treatments, and salon management.",
+        icon: (
+            <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 7v10a2 2 0 002 2h14a2 2 0 002-2V9a2 2 0 00-2-2h-6l-2-2H5a2 2 0 00-2 2z" />
+            </svg>
+        )
+    },
+    {
+        title: "Catering & Hospitality",
+        description: "Develop culinary skills and learn food service management.",
+        icon: (
+            <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
+            </svg>
+        )
+    },
+    {
+        title: "Computer Skills",
+        description: "Learn essential computer applications and digital literacy.",
+        icon: (
+            <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+            </svg>
+        )
+    }
+];
 
+const testimonials = [
+    {
+        quote: "The tailoring course gave me the skills to start my own business and support my family.",
+        author: "Jane, Fashion Design Graduate",
+        image: "/images/Food preparation and demonstration sessions.jpg"
+    },
+    {
+        quote: "Thanks to the computer skills training, I now work as a data entry specialist.",
+        author: "John, Computer Skills Graduate",
+        image: "/images/Food preparation and demonstration sessions.jpg"
+    }
+];
 
-          <section className="early-sec">
-
-              <div className="early">
-
-                  <div className="section-header youth">
-                      <Link href="/service" data-page="services" className="btn">Back</Link>
-                      <h3>Vocational Skills Training</h3>
+export default function VocationalSkillsPage() {
+    return (
+        <div className="pt-16">
+            {/* Hero Section */}
+            <section className="relative h-[60vh] min-h-[500px] bg-gray-900">
+                <Image
+                    src="/images/Food preparation and demonstration sessions.jpg"
+                    alt="Vocational Skills Training"
+                    fill
+                    className="object-cover opacity-40"
+                    priority
+                />
+                <div className="absolute inset-0 bg-gradient-to-b from-black/50 to-black/50" />
+                <div className="relative h-full container mx-auto px-4">
+                    <div className="flex flex-col justify-center h-full max-w-3xl">
+                        <div className="flex items-center gap-2 text-white/80 mb-4" data-aos="fade-right">
+                            <Link 
+                                href="/service" 
+                                className="hover:text-white transition-colors"
+                            >
+                                Services
+                            </Link>
+                            <span>/</span>
+                            <span>Vocational Skills Training</span>
                   </div>
-                  <div className="container late " >
-                      <h2>Background</h2>
-                      <p>
-                          This initiative is designed to equip teenage mothers and vulnerable young women with various
-                          vocational
-                          skills to help them achieve economic independence and become better parents. Participants can
-                          choose from
-                          a wide range of skills, including flower arrangement and decoration, tailoring and fashion
-                          design, hairdressing,
-                          making re-usable sanitary pads, liquid soap, and hair shampoo. The goal is to empower these
-                          young women to support
-                          themselves and their children.
-                      </p>
+                        <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6" data-aos="fade-up">
+                            Vocational Skills Training
+                        </h1>
+                        <p className="text-xl text-white/90 leading-relaxed" data-aos="fade-up" data-aos-delay="100">
+                            Empowering youth with practical skills for sustainable livelihoods and economic independence.
+                        </p>
+                    </div>
+                </div>
+            </section>
 
-                      <p>
-                          The vocational skills courses are offered over periods ranging from two months to one year.
-                          Youth from all backgrounds
-                          are taught a variety of income-generating skills. Classes are held at the CCAYEF offices,
-                          where all materials and supplies
-                          remain on-site at the training center.
-                      </p>
+            {/* Main Content */}
+            <section className="py-20 bg-gradient-to-b from-primary/5 via-white to-white">
+                <div className="container mx-auto px-4">
+                    <div className="max-w-3xl mx-auto mb-16">
+                        <div className="prose prose-lg">
+                            <div className="bg-white rounded-2xl shadow-lg p-8 mb-8" data-aos="fade-up">
+                                <h2 className="text-2xl font-semibold text-gray-800 mb-4">Our Approach</h2>
+                                <p className="text-gray-600 mb-6">
+                                    Our vocational training program is designed to provide practical, hands-on skills that lead to immediate employment opportunities or self-employment. We focus on market-driven skills that are in high demand in our community.
+                                </p>
+                                <div className="space-y-4">
+                                    <div className="flex items-start gap-3">
+                                        <svg className="w-6 h-6 text-primary flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                                        </svg>
+                                        <p className="text-gray-600">Industry-standard equipment and facilities</p>
+                                    </div>
+                                    <div className="flex items-start gap-3">
+                                        <svg className="w-6 h-6 text-primary flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                                        </svg>
+                                        <p className="text-gray-600">Experienced instructors from relevant industries</p>
+                                    </div>
+                                    <div className="flex items-start gap-3">
+                                        <svg className="w-6 h-6 text-primary flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                                        </svg>
+                                        <p className="text-gray-600">Business skills and entrepreneurship training</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
 
-                      <p>
-                          Teenage mothers and pregnant teens enrolled in the life skills courses under the maternal
-                          health division are encouraged to
-                          return to school or enroll in the vocational skills program after delivery, ensuring they can
-                          support their babies and gain
-                          financial independence. CCAYEF helps subsidize the cost of these programs for vulnerable
-                          youth, just as it supports school fees
-                          for mothers who choose to return to education.
-                      </p>
+                    {/* Courses Grid */}
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
+                        {courses.map((course, index) => (
+                            <div 
+                                key={index}
+                                className="bg-white rounded-2xl shadow-lg p-8 transform hover:-translate-y-1 transition-all duration-300"
+                                data-aos="fade-up"
+                                data-aos-delay={index * 100}
+                            >
+                                <div className="flex items-center gap-4 mb-4">
+                                    <div className="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center text-primary">
+                                        {course.icon}
+                                    </div>
+                                    <h3 className="text-xl font-semibold text-gray-800">{course.title}</h3>
+                                </div>
+                                <p className="text-gray-600">{course.description}</p>
+                            </div>
+                        ))}
+                    </div>
 
-                      <p>
-                          In addition to courses at the CCAYEF training center, our staff also partner with community
-                          groups to offer training in making Re-Usable Menstrual Pads (RUMPs), sewing bags, and soap
-                          making. These groups include community women’s groups, primary school pupils, and teachers in
-                          Mukono District.
-                      </p>
+                    {/* Testimonials */}
+                    <div className="mb-16">
+                        <h2 className="text-2xl font-semibold text-gray-800 mb-8 text-center" data-aos="fade-up">Student Success Stories</h2>
+                        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                            {testimonials.map((testimonial, index) => (
+                                <div 
+                                    key={index}
+                                    className="bg-white rounded-2xl shadow-lg overflow-hidden transform hover:-translate-y-1 transition-all duration-300"
+                                    data-aos="fade-up"
+                                    data-aos-delay={index * 100}
+                                >
+                                    <div className="relative h-48">
+                                        <Image
+                                            src={testimonial.image}
+                                            alt={testimonial.author}
+                                            fill
+                                            className="object-cover"
+                                        />
+                                        <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent" />
+                                    </div>
+                                    <div className="p-8">
+                                        <blockquote className="text-gray-600 text-lg italic mb-4">"{testimonial.quote}"</blockquote>
+                                        <p className="text-primary font-medium">{testimonial.author}</p>
+                                    </div>
+                                </div>
+                            ))}
+                        </div>
+                    </div>
 
-                      <h2>Priority Areas</h2>
-                      <ul>
-                          <li>Training youth in vocational skills including tailoring and fashion design, hairdressing,
-                              jewelry making, bag making, floral arrangement and decoration, and liquid and bar soap
-                              making.
-                          </li>
-                          <li>Promoting economic independence and building self-esteem.</li>
-                      </ul>
-
-                      <h2>Tailoring and Fashion Design</h2>
-                      <p>
-                          Students are trained by a local tailoring professional at the CCAYEF office, with machines and
-                          materials provided by CCAYEF. The classes run for one year, five days a week, with the trainer
-                          on-site for three days. The remaining two days are reserved for homework and class projects.
-                          Thanks to the generosity of our donors, CCAYEF has been able to purchase sewing machines to
-                          facilitate the program.
-                      </p>
-
-                      <h2>Hairdressing</h2>
-                      <p>
-                          The hairdressing program follows a similar structure, with classes running for one year, five
-                          days a week. A professional trainer is on-site for three days each week, and the remaining two
-                          days are dedicated to homework and class projects. All necessary equipment is provided by
-                          CCAYEF and remains at the office for use by the students.
-                      </p>
-
-                      <h2>Jewelry Making</h2>
-                      <p>
-                          The jewelry-making classes run for two months, meeting 1-2 times weekly depending on demand
-                          and enrollment. Materials are provided by CCAYEF and remain on-site. Ruth, a trained jewelry
-                          maker from CCAYEF staff, conducts these classes.
-                      </p>
-
-                      <h2>Liquid and Bar Soap Making</h2>
-                      <p>
-                          These workshops are offered based on demand and current enrollment. Students can learn the
-                          skills in one or two days, and all materials are provided by CCAYEF.
-                      </p>
-
-                      <h2>Floral Arrangement and Decoration</h2>
-                      <p>
-                          This year-long course teaches floral arrangement and decoration for weddings and large
-                          parties. The class meets 1-2 times weekly and is run by Proscovia, CCAYEF&#39;s programs
-                          coordinator. All materials are provided by CCAYEF.
-                      </p>
+                    {/* Impact Stats */}
+                    <div className="bg-white rounded-2xl shadow-lg p-8" data-aos="fade-up">
+                        <h2 className="text-2xl font-semibold text-gray-800 mb-8 text-center">Program Impact</h2>
+                        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+                            <div className="text-center">
+                                <div className="text-4xl font-bold text-primary mb-2">200+</div>
+                                <p className="text-gray-600">Students Trained</p>
+                            </div>
+                            <div className="text-center">
+                                <div className="text-4xl font-bold text-primary mb-2">85%</div>
+                                <p className="text-gray-600">Employment Rate</p>
+                            </div>
+                            <div className="text-center">
+                                <div className="text-4xl font-bold text-primary mb-2">50+</div>
+                                <p className="text-gray-600">Business Start-ups</p>
+                            </div>
                   </div>
               </div>
 
+                    {/* Call to Action */}
+                    <div className="mt-16 text-center" data-aos="fade-up">
+                        <h2 className="text-2xl font-semibold text-gray-800 mb-4">Ready to Start Your Journey?</h2>
+                        <p className="text-gray-600 mb-8">Join our vocational training program and take the first step towards a successful career.</p>
+                        <Link 
+                            href="/contact" 
+                            className="inline-block bg-primary text-white px-8 py-3 rounded-lg hover:bg-primary-dark transition-colors"
+                        >
+                            Enroll Now
+                        </Link>
+                    </div>
+                </div>
           </section>
-          
       </div>
   )
 }

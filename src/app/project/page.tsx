@@ -4,17 +4,21 @@ import React from 'react'
 
 export default function ProjectPage() {
     return (
-        <div>
-            <div className="breadcrumbs"></div>
-
-            <section className="sec-one">
-                <div className="container">
-                    <div className="section-header" data-aos="fade-up">
-                        <h3>Our Projects</h3>
-                        <p>Discover our ongoing and completed projects aimed at empowering children and youth</p>
+        <div className="min-h-screen bg-gray-50">
+            <div className="bg-gradient-to-r from-primary to-primary/90 text-white py-12">
+                <div className="container mx-auto px-4">
+                    <div className="max-w-4xl mx-auto text-center">
+                        <h3 className="text-4xl md:text-5xl font-bold mb-4">Our Projects</h3>
+                        <p className="text-lg opacity-90">
+                            Discover our ongoing and completed projects aimed at empowering children and youth
+                        </p>
                     </div>
-                    <div className="row project-grid">
+                </div>
+            </div>
 
+            <section className="py-16">
+                <div className="container mx-auto px-4">
+                    <div className="space-y-6">
                         {[
                             {
                                 title: 'COMBASHI Project',
@@ -73,47 +77,66 @@ export default function ProjectPage() {
                                 url: '/docs/reports/ccayef-2020-report.pdf'
                             },
                         ].map((project, index) => (
-                            <div className="col-12 mb-4" key={index} data-aos="fade-up">
-                                <div className="project-card p-4">
+                            <div 
+                                key={index} 
+                                className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300" 
+                                data-aos="fade-up" 
+                                data-aos-delay={index * 100}
+                            >
+                                <div className="p-6">
                                     {/* Title & Period Section */}
-                                    <div className="project-header">
-                                        <h5 className="project-title">
-                                            <i className="fas fa-bullseye"></i> {project.title}
-                                        </h5>
-                                        <span className="project-period">
-                                          <i className="fas fa-calendar-alt"></i> {project.period}
+                                    <div className="flex flex-col md:flex-row justify-between items-start md:items-center mb-6 gap-4">
+                                        <h3 className="text-2xl font-bold text-gray-800 flex items-center gap-3">
+                                            <i className="fas fa-bullseye text-primary"></i>
+                                            {project.title}
+                                        </h3>
+                                        <span className="inline-flex items-center gap-2 px-4 py-2 bg-gray-100 rounded-full text-gray-700">
+                                            <i className="fas fa-calendar-alt text-primary"></i>
+                                            {project.period}
                                         </span>
                                     </div>
 
                                     {/* Details Section */}
-                                    <div className="project-details">
-                                        <p>
-                                            <i className="fas fa-bullseye"></i> <strong>Goal:</strong> {project.goal}
-                                        </p>
-                                        <p>
-                                            <i className="fas fa-trophy"></i> <strong>Achievements:</strong> {project.achievements}
-                                        </p>
-                                        <p>
-                                            <i className="fas fa-handshake"></i> <strong>Funding Partners:</strong> {project.partners}
-                                        </p>
+                                    <div className="space-y-4 mb-6">
+                                        <div className="flex items-start gap-3">
+                                            <i className="fas fa-bullseye text-primary mt-1"></i>
+                                            <div>
+                                                <span className="font-semibold text-gray-700">Goal:</span>
+                                                <p className="text-gray-600">{project.goal}</p>
+                                            </div>
+                                        </div>
+                                        <div className="flex items-start gap-3">
+                                            <i className="fas fa-trophy text-primary mt-1"></i>
+                                            <div>
+                                                <span className="font-semibold text-gray-700">Achievements:</span>
+                                                <p className="text-gray-600">{project.achievements}</p>
+                                            </div>
+                                        </div>
+                                        <div className="flex items-start gap-3">
+                                            <i className="fas fa-handshake text-primary mt-1"></i>
+                                            <div>
+                                                <span className="font-semibold text-gray-700">Funding Partners:</span>
+                                                <p className="text-gray-600">{project.partners}</p>
+                                            </div>
+                                        </div>
                                     </div>
 
                                     {/* Download Button */}
-                                    <div className="project-download">
+                                    <div className="flex justify-end">
                                         <a
                                             href={project.url}
-                                            className="btn btn-primary"
+                                            className="inline-flex items-center gap-2 px-6 py-3 bg-primary text-white rounded-lg hover:bg-primary-dark transition-colors duration-200"
                                             download
                                             target="_blank"
                                             rel="noopener noreferrer"
                                         >
-                                            <i className="fas fa-download"></i> Download Report
+                                            <i className="fas fa-download"></i>
+                                            Download Report
                                         </a>
                                     </div>
                                 </div>
                             </div>
                         ))}
-
                     </div>
                 </div>
             </section>

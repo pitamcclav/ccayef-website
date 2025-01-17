@@ -1,47 +1,78 @@
 'use client'
 import { useState } from 'react'
-import emailjs from '@emailjs/browser'
 
-export function VolunteerForm() {
+export default function VolunteerForm() {
     const [status, setStatus] = useState('')
 
     const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault()
-        const form = e.target as HTMLFormElement
-
+        const formData = new FormData(e.currentTarget)
+        
         try {
-            await emailjs.send(
-                'service_enz5mri',
-                'template_nqxqm57',
-                {
-                    name: (form.elements.namedItem('name') as HTMLInputElement).value,
-                    email: (form.elements.namedItem('email') as HTMLInputElement).value,
-                    message: (form.elements.namedItem('message') as HTMLInputElement).value,
+            const response = await fetch('/api/volunteer', {
+                method: 'POST',
+                body: JSON.stringify({
+                    email: formData.get('email'),
+                    name: formData.get('name'),
+                    message: formData.get('message')
+                }),
+                headers: {
+                    'Content-Type': 'application/json'
                 }
-            )
-            setStatus('Message sent successfully!')
+            })
+
+            if (response.ok) {
+                setStatus('Thank you for your interest! We will contact you soon.')
+                e.currentTarget.reset()
+            } else {
+                setStatus('Something went wrong. Please try again later.')
+            }
         } catch (error) {
-            setStatus('Failed to send message')
-            console.error('Error', error)
+            setStatus('Something went wrong. Please try again later.')
         }
     }
 
     return (
-        <form onSubmit={handleSubmit}>
-            <div className="mb-3">
-                <label htmlFor="email" className="form-label">Email</label>
-                <input type="email" className="form-control" id="email" required />
+        <form onSubmit={handleSubmit} className="max-w-md mx-auto">
+            <div className="mb-4">
+                <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-1">Email</label>
+                <input 
+                    type="email" 
+                    className="w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-primary focus:border-primary" 
+                    id="email" 
+                    name="email"
+                    required 
+                />
             </div>
-            <div className="mb-3">
-                <label htmlFor="name" className="form-label">Name</label>
-                <input type="text" className="form-control" id="name" required />
+            <div className="mb-4">
+                <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-1">Name</label>
+                <input 
+                    type="text" 
+                    className="w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-primary focus:border-primary" 
+                    id="name" 
+                    name="name"
+                    required 
+                />
             </div>
-            <div className="mb-3">
-                <label htmlFor="message" className="form-label">Message</label>
-                <textarea className="form-control" id="message" rows={3} required />
+            <div className="mb-4">
+                <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-1">Message</label>
+                <textarea 
+                    className="w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-primary focus:border-primary" 
+                    id="message" 
+                    name="message"
+                    rows={3} 
+                    required 
+                />
             </div>
-            <button type="submit" className="btn btn-sm btn-primary">Submit</button>
-            {status && <p className="mt-2">{status}</p>}
+            <button 
+                type="submit" 
+                className="w-full bg-primary hover:bg-primary/90 text-white font-semibold py-2 px-4 rounded-md transition-colors"
+            >
+                Submit
+            </button>
+            {status && (
+                <p className="mt-4 text-sm text-center text-gray-700">{status}</p>
+            )}
         </form>
     )
 }

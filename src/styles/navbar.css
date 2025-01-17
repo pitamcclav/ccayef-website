@@ -1,0 +1,18 @@
+/* Navbar styles */
+.navbar {
+    transform: translateY(0);
+    transition: transform 0.3s ease-in-out;
+}
+
+.navbar.scrolled {
+    transform: translateY(-100%);
+}
+
+.navbar.scrolled:hover {
+    transform: translateY(0);
+}
+
+/* Add padding to body to account for fixed navbar */
+body {
+    padding-top: 4rem; /* 64px */
+} 

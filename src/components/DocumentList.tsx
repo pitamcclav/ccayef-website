@@ -65,50 +65,45 @@ export function DocumentList({ type }: DocumentListProps) {
     }, [type])
 
     if (loading) return (
-        <div className="d-flex justify-content-center p-4">
-            <div className="spinner-border text-primary" role="status">
-                <span className="visually-hidden">Loading...</span>
+        <div className="flex justify-center p-4">
+            <div className="animate-spin rounded-full h-8 w-8 border-t-2 border-b-2 border-primary" role="status">
+                <span className="sr-only">Loading...</span>
             </div>
         </div>
     )
 
     if (error) return (
-        <div className="alert alert-danger" role="alert">
+        <div className="bg-danger/10 text-danger px-4 py-3 rounded-lg" role="alert">
             {error}
         </div>
     )
 
     if (documents.length === 0) return (
-        <div className="alert alert-info" role="alert">
+        <div className="bg-info/10 text-info px-4 py-3 rounded-lg" role="alert">
             No documents found in this category.
         </div>
     )
 
     return (
-        <div className={`${type} row g-4`}>
+        <div className={`${type} grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4`}>
             {documents.map((doc, index) => (
-                <div key={`${doc.name}-${index}`} className="col-lg-4 col-md-6">
-                    <div className="card h-100">
-                        <div className="card-body text-center">
+                <div key={`${doc.name}-${index}`} className="h-full">
+                    <div className="bg-white rounded-lg shadow-md h-full">
+                        <div className="p-6 flex flex-col items-center">
                             <img
                                 src={getFileIcon(doc.type)}
                                 alt={`${doc.type} file`}
-                                className="mb-3"
-                                style={{
-                                    width: '64px',
-                                    height: '64px',
-                                    objectFit: 'contain'
-                                }}
+                                className="w-16 h-16 object-contain mb-3"
                             />
-                            <h6 className="card-title text-truncate" title={doc.name}>
+                            <h6 className="text-lg font-semibold truncate w-full text-center mb-2" title={doc.name}>
                                 {doc.name}
                             </h6>
-                            <p className="card-text small text-muted mb-3">
+                            <p className="text-sm text-gray-500 mb-4">
                                 {formatFileSize(doc.size)} • Updated {formatDate(doc.lastModified)}
                             </p>
                             <a
                                 href={doc.url}
-                                className="btn btn-primary"
+                                className="bg-primary hover:bg-primary/90 text-white font-semibold py-2 px-4 rounded transition-colors"
                                 download
                                 target="_blank"
                                 rel="noopener noreferrer"

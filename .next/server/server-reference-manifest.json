@@ -1,5 +1,17 @@
 {
-  "node": {},
+  "node": {
+    "40aa6d669f690a18aa3c9604bf05d0789dca7a616e": {
+      "workers": {
+        "app/api/images/route": {
+          "moduleId": "(rsc)/./node_modules/next/dist/build/webpack/loaders/next-flight-action-entry-loader.js?actions=%5B%5B%22C%3A%5C%5CUsers%5C%5CHP%5C%5CDesktop%5C%5CNew%20folder%5C%5Cprojects%5C%5Cccayef-website%5C%5Csrc%5C%5Capp%5C%5Capi%5C%5Cimages%5C%5Croute.ts%22%2C%5B%5B%2240aa6d669f690a18aa3c9604bf05d0789dca7a616e%22%2C%22GET%22%5D%5D%5D%5D&__client_imported__=!",
+          "async": false
+        }
+      },
+      "layer": {
+        "app/api/images/route": "rsc"
+      }
+    }
+  },
   "edge": {},
-  "encryptionKey": "38luELSOwpsvFbJbJ0CC3X0R63a7WnKfWWt9xzAOwEA="
+  "encryptionKey": "b9qP+dhA1FcugTTo+Gj2I6LmIMxzBuHaP42uji1Ud64="
 }

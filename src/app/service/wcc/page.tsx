@@ -1,0 +1,215 @@
+'use client'
+
+import React from 'react'
+import Image from 'next/image'
+import Link from 'next/link'
+
+const initiatives = [
+    {
+        title: "Clean Water Access",
+        description: "Installing water points and ensuring sustainable access to clean water.",
+        icon: (
+            <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4" />
+            </svg>
+        )
+    },
+    {
+        title: "Sanitation Facilities",
+        description: "Building and maintaining proper sanitation infrastructure.",
+        icon: (
+            <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
+            </svg>
+        )
+    },
+    {
+        title: "Climate Education",
+        description: "Raising awareness about climate change and environmental protection.",
+        icon: (
+            <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
+            </svg>
+        )
+    },
+    {
+        title: "Waste Management",
+        description: "Implementing sustainable waste disposal and recycling programs.",
+        icon: (
+            <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16" />
+            </svg>
+        )
+    }
+];
+
+const projects = [
+    {
+        title: "Community Water Points",
+        description: "Installation of water points in underserved communities.",
+        image: "/images/Food preparation and demonstration sessions.jpg"
+    },
+    {
+        title: "Tree Planting",
+        description: "Reforestation initiatives to combat climate change.",
+        image: "/images/Food preparation and demonstration sessions.jpg"
+    },
+    {
+        title: "Hygiene Education",
+        description: "School-based programs promoting proper hygiene practices.",
+        image: "/images/Food preparation and demonstration sessions.jpg"
+    }
+];
+
+export default function WASHClimatePage() {
+    return (
+        <div className="pt-16">
+            {/* Hero Section */}
+            <section className="relative h-[60vh] min-h-[500px] bg-gray-900">
+                <Image
+                    src="/images/Food preparation and demonstration sessions.jpg"
+                    alt="WASH and Climate Change"
+                    fill
+                    className="object-cover opacity-40"
+                    priority
+                />
+                <div className="absolute inset-0 bg-gradient-to-b from-black/50 to-black/50" />
+                <div className="relative h-full container mx-auto px-4">
+                    <div className="flex flex-col justify-center h-full max-w-3xl">
+                        <div className="flex items-center gap-2 text-white/80 mb-4" data-aos="fade-right">
+                            <Link 
+                                href="/service" 
+                                className="hover:text-white transition-colors"
+                            >
+                                Services
+                            </Link>
+                            <span>/</span>
+                            <span>WASH and Climate Change</span>
+                        </div>
+                        <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6" data-aos="fade-up">
+                            WASH and Climate Change
+                        </h1>
+                        <p className="text-xl text-white/90 leading-relaxed" data-aos="fade-up" data-aos-delay="100">
+                            Promoting sustainable water, sanitation, hygiene practices and environmental conservation.
+                        </p>
+                    </div>
+                </div>
+            </section>
+
+            {/* Main Content */}
+            <section className="py-20 bg-gradient-to-b from-primary/5 via-white to-white">
+                <div className="container mx-auto px-4">
+                    <div className="max-w-3xl mx-auto mb-16">
+                        <div className="prose prose-lg">
+                            <div className="bg-white rounded-2xl shadow-lg p-8 mb-8" data-aos="fade-up">
+                                <h2 className="text-2xl font-semibold text-gray-800 mb-4">Our Approach</h2>
+                                <p className="text-gray-600 mb-6">
+                                    We take an integrated approach to water, sanitation, hygiene, and climate change issues. Our programs focus on sustainable solutions that empower communities to maintain clean water sources, practice proper sanitation, and protect their environment.
+                                </p>
+                                <div className="space-y-4">
+                                    <div className="flex items-start gap-3">
+                                        <svg className="w-6 h-6 text-primary flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                                        </svg>
+                                        <p className="text-gray-600">Community-led implementation and maintenance</p>
+                                    </div>
+                                    <div className="flex items-start gap-3">
+                                        <svg className="w-6 h-6 text-primary flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                                        </svg>
+                                        <p className="text-gray-600">Sustainable and environmentally friendly solutions</p>
+                                    </div>
+                                    <div className="flex items-start gap-3">
+                                        <svg className="w-6 h-6 text-primary flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                                        </svg>
+                                        <p className="text-gray-600">Education and behavior change programs</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    {/* Initiatives Grid */}
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
+                        {initiatives.map((initiative, index) => (
+                            <div 
+                                key={index}
+                                className="bg-white rounded-2xl shadow-lg p-8 transform hover:-translate-y-1 transition-all duration-300"
+                                data-aos="fade-up"
+                                data-aos-delay={index * 100}
+                            >
+                                <div className="flex items-center gap-4 mb-4">
+                                    <div className="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center text-primary">
+                                        {initiative.icon}
+                                    </div>
+                                    <h3 className="text-xl font-semibold text-gray-800">{initiative.title}</h3>
+                                </div>
+                                <p className="text-gray-600">{initiative.description}</p>
+                            </div>
+                        ))}
+                    </div>
+
+                    {/* Projects */}
+                    <div className="mb-16">
+                        <h2 className="text-2xl font-semibold text-gray-800 mb-8 text-center" data-aos="fade-up">Current Projects</h2>
+                        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+                            {projects.map((project, index) => (
+                                <div 
+                                    key={index}
+                                    className="bg-white rounded-2xl shadow-lg overflow-hidden transform hover:-translate-y-1 transition-all duration-300"
+                                    data-aos="fade-up"
+                                    data-aos-delay={index * 100}
+                                >
+                                    <div className="relative h-48">
+                                        <Image
+                                            src={project.image}
+                                            alt={project.title}
+                                            fill
+                                            className="object-cover"
+                                        />
+                                    </div>
+                                    <div className="p-6">
+                                        <h3 className="text-lg font-semibold text-gray-800 mb-2">{project.title}</h3>
+                                        <p className="text-gray-600">{project.description}</p>
+                                    </div>
+                                </div>
+                            ))}
+                        </div>
+                    </div>
+
+                    {/* Impact Stats */}
+                    <div className="bg-white rounded-2xl shadow-lg p-8" data-aos="fade-up">
+                        <h2 className="text-2xl font-semibold text-gray-800 mb-8 text-center">Our Impact</h2>
+                        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+                            <div className="text-center">
+                                <div className="text-4xl font-bold text-primary mb-2">50+</div>
+                                <p className="text-gray-600">Water Points Installed</p>
+                            </div>
+                            <div className="text-center">
+                                <div className="text-4xl font-bold text-primary mb-2">10K+</div>
+                                <p className="text-gray-600">Trees Planted</p>
+                            </div>
+                            <div className="text-center">
+                                <div className="text-4xl font-bold text-primary mb-2">5000+</div>
+                                <p className="text-gray-600">People Trained</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    {/* Call to Action */}
+                    <div className="mt-16 text-center" data-aos="fade-up">
+                        <h2 className="text-2xl font-semibold text-gray-800 mb-4">Join Our Environmental Efforts</h2>
+                        <p className="text-gray-600 mb-8">Support our WASH and climate change initiatives to create a sustainable future.</p>
+                        <Link 
+                            href="/contact" 
+                            className="inline-block bg-primary text-white px-8 py-3 rounded-lg hover:bg-primary-dark transition-colors"
+                        >
+                            Get Involved
+                        </Link>
+                    </div>
+                </div>
+            </section>
+        </div>
+    )
+} 
