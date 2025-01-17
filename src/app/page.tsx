@@ -334,7 +334,7 @@ export default function Home() {
                                             </div>
                                         </div>
                                         <blockquote className="text-gray-600 text-lg leading-relaxed">
-                                            "{testimonial.quote}"
+                                            &#34;{testimonial.quote}&#34;
                                         </blockquote>
                                     </div>
                                 </div>

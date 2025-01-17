@@ -172,7 +172,7 @@ export default function AdolescentEmpowermentPage() {
                                     <div className="p-6">
                                         {story.quote ? (
                                             <>
-                                                <blockquote className="text-gray-600 text-lg italic mb-4">"{story.quote}"</blockquote>
+                                                <blockquote className="text-gray-600 text-lg italic mb-4">&#34;{story.quote}&#34;</blockquote>
                                                 <p className="text-primary font-medium">{story.author}</p>
                                             </>
                                         ) : (

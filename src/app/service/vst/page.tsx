@@ -166,7 +166,7 @@ export default function VocationalSkillsPage() {
                                         <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent" />
                                     </div>
                                     <div className="p-8">
-                                        <blockquote className="text-gray-600 text-lg italic mb-4">"{testimonial.quote}"</blockquote>
+                                        <blockquote className="text-gray-600 text-lg italic mb-4">&#34;{testimonial.quote}&#34;</blockquote>
                                         <p className="text-primary font-medium">{testimonial.author}</p>
                                     </div>
                                 </div>

@@ -166,7 +166,7 @@ export default function TeenageMotherRehabPage() {
                                         <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent" />
                                     </div>
                                     <div className="p-8">
-                                        <blockquote className="text-gray-600 text-lg italic mb-4">"{story.quote}"</blockquote>
+                                        <blockquote className="text-gray-600 text-lg italic mb-4">&#34;{story.quote}&#34;</blockquote>
                                         <p className="text-primary font-medium">{story.author}</p>
                                     </div>
                                 </div>

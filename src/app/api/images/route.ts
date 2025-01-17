@@ -11,7 +11,7 @@ interface ImageData {
     height: number
 }
 
-export async function GET(request: Request) {
+export async function GET() {
     try {
         const publicDir = path.join(process.cwd(), 'public')
         const photosDir = path.join(publicDir, 'images/gallery')
