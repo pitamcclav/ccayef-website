@@ -1,5 +1,1 @@
-{
-  "node": {},
-  "edge": {},
-  "encryptionKey": "za6I8lovhbmvIYsAZlY2uTYZ2XCQGiWoHw1oIPHfRqU="
-}
+{"node":{"0010c8178d7ba7b3eaee4f31026276c2e7066d37af":{"workers":{"app/api/images/route":{"moduleId":"55407","async":false}},"layer":{"app/api/images/route":"rsc"}}},"edge":{},"encryptionKey":"ksR13yvWAQjt47nkD4igHb6VWyATZP/IjNbXPxz+GdM="}
