@@ -19,17 +19,17 @@ const paymentMethods = [
     { 
         id: 'mtn', 
         label: 'MTN Mobile Money',
-        icon: '/images/payment/mtn.png'
+        icon: '/images/mtn.png'
     },
     { 
         id: 'airtel', 
         label: 'Airtel Money',
-        icon: '/images/payment/airtel.png'
+        icon: '/images/airtel.png'
     },
     { 
         id: 'card', 
         label: 'Card Payment',
-        icon: '/images/payment/card.png'
+        icon: '/images/card.png'
     }
 ]
 
@@ -232,7 +232,7 @@ export default function DonateModal({ isOpen, onClose }: DonateModalProps) {
                                                 alt={method.label}
                                                 width={32}
                                                 height={32}
-                                                className="w-8 h-8 object-contain"
+                                                className="w-10 h-10 object-contain"
                                             />
                                             <span>{method.label}</span>
                                         </button>

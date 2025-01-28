@@ -209,6 +209,7 @@ export default function AboutPage() {
                         <p className="section-subtitle">Meet the dedicated individuals behind CCAYEF</p>
                     </div>
                     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 max-w-6xl mx-auto" data-aos="fade-up">
+                        {/*Prossy*/}
                         <div className="group">
                             <div className="bg-white rounded-2xl shadow-lg overflow-hidden p-4 sm:p-6 text-center">
                                 <div className="w-32 h-32 sm:w-40 sm:h-40 mx-auto mb-4 sm:mb-6 rounded-full border-4 border-white shadow-lg overflow-hidden">
@@ -241,6 +242,71 @@ export default function AboutPage() {
                             </div>
                         </div>
                         {/* Add more team members here */}
+                        {/*Ruth*/}
+                        <div className="group">
+                            <div className="bg-white rounded-2xl shadow-lg overflow-hidden p-4 sm:p-6 text-center">
+                                <div className="w-32 h-32 sm:w-40 sm:h-40 mx-auto mb-4 sm:mb-6 rounded-full border-4 border-white shadow-lg overflow-hidden">
+                                    <Image
+                                        src="/images/staff/ruth.png"
+                                        alt="Mrs. Lucia Kivumbi Namusisi"
+                                        width={160}
+                                        height={160}
+                                        className="object-cover w-full h-full"
+                                    />
+                                </div>
+                                <h5 className="text-xl sm:text-2xl font-semibold text-gray-800 mb-2">Mrs. Lucia Kivumbi Namusisi</h5>
+                                <p className="text-primary font-medium text-base sm:text-lg mb-4">Projects Coordinator </p>
+                                <p className="text-gray-600 text-base sm:text-lg leading-relaxed mb-6">
+                                    Ruth has significant experience in the nonprofit sector, dedicated to enhancing the lives of
+                                    vulnerable children and youth in Uganda.
+                                </p>
+                                <div className="flex justify-center space-x-4">
+                                    <a href="#" className="text-gray-400 hover:text-primary transition-colors">
+                                        <svg className="w-5 h-5 sm:w-6 sm:h-6" fill="currentColor" viewBox="0 0 24 24">
+                                            <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+                                        </svg>
+                                    </a>
+                                    <a href="#" className="text-gray-400 hover:text-primary transition-colors">
+                                        <svg className="w-5 h-5 sm:w-6 sm:h-6" fill="currentColor" viewBox="0 0 24 24">
+                                            <path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"/>
+                                        </svg>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+                        {/*Judith*/}
+                        <div className="group">
+                            <div className="bg-white rounded-2xl shadow-lg overflow-hidden p-4 sm:p-6 text-center">
+                                <div className="w-32 h-32 sm:w-40 sm:h-40 mx-auto mb-4 sm:mb-6 rounded-full border-4 border-white shadow-lg overflow-hidden">
+                                    <Image
+                                        src="/images/staff/judith.png"
+                                        alt="Mrs. Judith Katongole Nsangi"
+                                        width={160}
+                                        height={160}
+                                        className="object-cover w-full h-full"
+                                    />
+                                </div>
+                                <h5 className="text-xl sm:text-2xl font-semibold text-gray-800 mb-2">Mrs. Judith Katongole Nsangi</h5>
+                                <p className="text-primary font-medium text-base sm:text-lg mb-4">Finance and Human Resource</p>
+                                <p className="text-gray-600 text-base sm:text-lg leading-relaxed mb-6">
+                                    Judith has significant experience in the nonprofit sector, working to improve the lives of
+                                    vulnerable children and youth in Uganda.
+                                </p>
+                                <div className="flex justify-center space-x-4">
+                                    <a href="#" className="text-gray-400 hover:text-primary transition-colors">
+                                        <svg className="w-5 h-5 sm:w-6 sm:h-6" fill="currentColor" viewBox="0 0 24 24">
+                                            <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+                                        </svg>
+                                    </a>
+                                    <a href="#" className="text-gray-400 hover:text-primary transition-colors">
+                                        <svg className="w-5 h-5 sm:w-6 sm:h-6" fill="currentColor" viewBox="0 0 24 24">
+                                            <path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"/>
+                                        </svg>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </section>
